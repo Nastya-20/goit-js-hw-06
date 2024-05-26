@@ -18,7 +18,7 @@ class Storage {
         if (index !== -1) {
             this.#items.splice(index, 1);
         }
-        return this.#items; // Додатково повертаємо масив після видалення
+        return this.#items; 
     }
 }
 
@@ -28,8 +28,12 @@ console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
 storage.addItem("Droid");
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 
-console.log(storage.removeItem("Prolonger")); // ["Nanitoids", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+storage.removeItem("Scaner");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
 
 
 
